@@ -1,0 +1,15 @@
+version: '2.1'
+
+services:
+  mysql:
+    image: mysql:5.7
+    command: --sql_mode=""
+    environment:
+      - MYSQL_ROOT_PASSWORD=12345678
+    ports:
+      - "3306:3306"
+    healthcheck:
+      test: ["CMD", "mysql", "--user=root", "--password=12345678", "-e", "select 1 from dual"]
+      interval: 10s
+      timeout: 20s
+      retries: 5
