@@ -2,7 +2,7 @@ import { Migration } from '@mikro-orm/migrations';
 
 export class Migration0001 extends Migration {
   async up(): Promise<void> {
-    
+
     this.addSql(`
       CREATE TABLE author (
         id      INT NOT NULL AUTO_INCREMENT,

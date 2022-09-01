@@ -13,6 +13,7 @@ router.get('/', async (req: Request, res: Response) => {
     orderBy: { name: QueryOrder.DESC },
     limit: 20,
   });
+
   res.json(authors);
 });
 
